@@ -65,6 +65,12 @@
         <activity android:name=".Baek_Activity.Baek_5F_Activity"/>
         <activity android:name=".Baek_Activity.Baek_6F_Activity"/>
         <activity android:name=".Baek_Activity.Baek_7F_Activity"/>
+        <activity android:name=".Library_Activity.Library_1F_Activity"/>
+        <activity android:name=".Library_Activity.Library_2F_Activity"/>
+        <activity android:name=".Library_Activity.Library_3F_Activity"/>
+        <activity android:name=".Library_Activity.Library_4F_Activity"/>
+        <activity android:name=".Library_Activity.Library_5F_Activity"/>
+        <activity android:name=".Library_Activity.Library_6F_Activity"/>
         
         <activity
             android:name=".FirstScreenActivity"
