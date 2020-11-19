@@ -29,6 +29,13 @@ import com.example.myapplication.Art_Activity.Art_4F_Activity;
 import com.example.myapplication.Art_Activity.Art_5F_Activity;
 import com.example.myapplication.Art_Activity.Art_6F_Activity;
 import com.example.myapplication.Art_Activity.Art_7F_Activity;
+import com.example.myapplication.Baek_Activity.Baek_1F_Activity;
+import com.example.myapplication.Baek_Activity.Baek_2F_Activity;
+import com.example.myapplication.Baek_Activity.Baek_3F_Activity;
+import com.example.myapplication.Baek_Activity.Baek_4F_Activity;
+import com.example.myapplication.Baek_Activity.Baek_5F_Activity;
+import com.example.myapplication.Baek_Activity.Baek_6F_Activity;
+import com.example.myapplication.Baek_Activity.Baek_7F_Activity;
 import com.example.myapplication.Music_Activity.Music_1F_Activity;
 import com.example.myapplication.Music_Activity.Music_2F_Activity;
 import com.example.myapplication.Music_Activity.Music_3F_Activity;
@@ -81,6 +88,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     int temp;
     int temp1;
     int temp2;
+    int temp3;
     @SuppressLint("WrongViewCast")
 
     @Override
@@ -393,7 +401,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
 
 
-
             alertDialogBuilder.setTitle("층을 선택하세요");
             alertDialogBuilder.setCancelable(false);
 
@@ -447,7 +454,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         else if (marker.getTitle().equals("음악대학")) {
             final CharSequence[] items = { "1층", "2층", "3층", "4층","5층", "6층", "7층"};
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
-
 
 
             alertDialogBuilder.setTitle("층을 선택하세요");
@@ -514,7 +520,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
 
 
-
             alertDialogBuilder.setTitle("층을 선택하세요");
             alertDialogBuilder.setCancelable(false);
 
@@ -561,6 +566,70 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             temp2 = which;
+                        }
+                    });
+
+            alertDialogBuilder.setNeutralButton("취소", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.cancel();
+                }
+            });
+            AlertDialog alertDialog = alertDialogBuilder.create();
+            alertDialog.show();
+        }
+
+        else if(marker.getTitle().equals("백주년기념관")) {
+
+            final CharSequence[] items = {"1층", "2층", "3층", "4층", "5층", "6층", "7층"};
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
+
+
+            alertDialogBuilder.setTitle("층을 선택하세요");
+            alertDialogBuilder.setCancelable(false);
+
+            alertDialogBuilder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    switch (temp3){
+                        case 0:
+                            Intent intent = new Intent(MainActivity.this, Baek_1F_Activity.class);
+                            startActivity(intent);
+                            break;
+                        case 1:
+                            Intent intent1 = new Intent(MainActivity.this, Baek_2F_Activity.class);
+                            startActivity(intent1);
+                            break;
+                        case 2:
+                            Intent intent2 = new Intent(MainActivity.this, Baek_3F_Activity.class);
+                            startActivity(intent2);
+                            break;
+                        case 3:
+                            Intent intent3 = new Intent(MainActivity.this, Baek_4F_Activity.class);
+                            startActivity(intent3);
+                            break;
+                        case 4:
+                            Intent intent4 = new Intent(MainActivity.this, Baek_5F_Activity.class);
+                            startActivity(intent4);
+                            break;
+                        case 5:
+                            Intent intent5 = new Intent(MainActivity.this, Baek_6F_Activity.class);
+                            startActivity(intent5);
+                            break;
+                        case 6:
+                            Intent intent6 = new Intent(MainActivity.this, Baek_7F_Activity.class);
+                            startActivity(intent6);
+                            break;
+                    }
+                    dialog.dismiss();
+                }
+            });
+
+            alertDialogBuilder.setSingleChoiceItems(items, -1,
+                    new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            temp3 = which;
                         }
                     });
 

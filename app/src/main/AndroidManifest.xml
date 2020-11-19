@@ -58,6 +58,14 @@
         <activity android:name=".Art_Activity.Art_5F_Activity"/>
         <activity android:name=".Art_Activity.Art_6F_Activity"/>
         <activity android:name=".Art_Activity.Art_7F_Activity"/>
+        <activity android:name=".Baek_Activity.Baek_1F_Activity"/>
+        <activity android:name=".Baek_Activity.Baek_2F_Activity"/>
+        <activity android:name=".Baek_Activity.Baek_3F_Activity"/>
+        <activity android:name=".Baek_Activity.Baek_4F_Activity"/>
+        <activity android:name=".Baek_Activity.Baek_5F_Activity"/>
+        <activity android:name=".Baek_Activity.Baek_6F_Activity"/>
+        <activity android:name=".Baek_Activity.Baek_7F_Activity"/>
+        
         <activity
             android:name=".FirstScreenActivity"
             android:screenOrientation="portrait"
